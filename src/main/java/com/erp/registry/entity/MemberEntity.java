@@ -5,15 +5,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.modelmapper.ModelMapper;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.text.DateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "ERPUSRINF")
+@Table(name = "ERPUSRDEF")
 public class MemberEntity {
 
     @Id
