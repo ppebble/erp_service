@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class PostMemberService {
     private final MemberRepository memberRepository;
     public void save(MemberDTO memberDTO) {
+
         // repsitory의 save 메서드 호출
         MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
         memberRepository.save(memberEntity);
