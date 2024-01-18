@@ -33,6 +33,8 @@ dependencies {
 	testImplementation('org.projectlombok:lombok')
 	testAnnotationProcessor('org.projectlombok:lombok')
 
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.4.2'
 }
 

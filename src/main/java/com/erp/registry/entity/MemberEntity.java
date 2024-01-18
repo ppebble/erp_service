@@ -6,7 +6,9 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 
 import java.time.LocalDateTime;
@@ -15,6 +17,8 @@ import java.util.Date;
 @Entity
 @Data
 @Table(name = "ERPUSRDEF")
+@NoArgsConstructor
+@AllArgsConstructor
 public class MemberEntity {
 
     @Id
