@@ -16,7 +16,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "ERPUSRDEF")
+@Table(name = "profile")
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberEntity {
@@ -25,50 +25,92 @@ public class MemberEntity {
     @Column(name = "user_id",unique = true, nullable = false)
     private String userId;
     @Column
-    private String password;
+    private String userPw;
     @Column
-    private String name;
+    private String userName;
     @Column
-    private String regNo;
+    private String residentNumber;
     @Column
     private String gender;
     @Column
     private String engName;
     @Column
-    private String dept;
+    private String task;
     @Column
-    private String employeeNumber;
+    private String empNo;
     @Column
-    private Date enterDate;
+    private Date hiredate;
     @Column
-    private String famRelation;
+    private String family;
     @Column
-    private Date enlistmentDate;
+    private String relation;
     @Column
-    private Date dischargeDate;
+    private Date armyStart;
     @Column
-    private String militarySub;
+    private Date armyEnd;
     @Column
-    private Date birthDay;
+    private String armyBranch;
     @Column
-    private String contact;
+    private Date birthday;
+    @Column
+    private String tel;
+    @Column
+    private String emergencyTel;
+    @Column
+    private String userEmail;
     @Column
     private String address;
     @Column
-    private String eduHis;
+    private String highschool;
     @Column
-    private String techLvl;
+    private String education;
+    @Column
+    private String gradSchool;
+    @Column
+    private String techGrade;
     @Column
     private String position;
     @Column
-    private String workType;
+    private String loc;
     @Column
-    private String workPlace;
+    private String locDetail;
+//    @Column
+//    private Boolean deleteFlag;
     @Column
-    private Boolean deleteFlag;
+    private String shotPath;
+    @Column
+    private String spot;
+    @Column
+    private String admincheck;
+    @Column
+    private Double licenseCount;
+    @Column
+    private String agreePromiss;
+    @Column
+    private Double careerCount;
+    @Column
+    private String evidence;
+    @Column
+    private String multiMajor1;
+    @Column
+    private String multiMajor2;
+    @Column
+    private Long number;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createTime;
+    private LocalDateTime email_auth_date;
+    @Column
+    private String science_tech_certify;
+
+//    @Column
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    private LocalDateTime createTime;
+    @Column
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDateTime signUpDate;
+    @Column
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDateTime leavedate;
 
 
 
