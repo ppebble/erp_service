@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -26,6 +27,11 @@ public class MemberEntity {
     private String userId;
     @Column
     private String userPw;
+
+    public void setUserPw(String userPw, PasswordEncoder encoder) {
+        this.userPw = encoder.encode(userPw);
+    }
+
     @Column
     private String userName;
     @Column
@@ -61,13 +67,13 @@ public class MemberEntity {
     @Column
     private String address;
     @Column
-    private String highschool;
-    @Column
     private String education;
     @Column
     private String gradSchool;
     @Column
     private String techGrade;
+    @Column
+    private String highschool;
     @Column
     private String position;
     @Column
@@ -81,7 +87,7 @@ public class MemberEntity {
     @Column
     private String spot;
     @Column
-    private String admincheck;
+    private int admincheck;
     @Column
     private Double licenseCount;
     @Column
@@ -98,9 +104,9 @@ public class MemberEntity {
     private Long number;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime email_auth_date;
+    private LocalDateTime emailAuthDate;
     @Column
-    private String science_tech_certify;
+    private String scienceTechCertify;
 
 //    @Column
 //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -111,8 +117,6 @@ public class MemberEntity {
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime leavedate;
-
-
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO){
         ModelMapper modelMapper = new ModelMapper();

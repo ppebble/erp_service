@@ -1,5 +1,6 @@
 package com.erp.registry.controller;
 
+import com.erp.config.BCryptConfig;
 import com.erp.registry.dto.MemberDTO;
 import com.erp.registry.service.CheckIdValidator;
 import com.erp.registry.service.GetMemberService;
@@ -27,6 +28,7 @@ public class MemberController {
     public void validatorBinder(WebDataBinder binder) {
         binder.addValidators(checkEmailValidator);
     }
+    private final BCryptConfig passwordEncoder;
 
     @GetMapping("/member")
     public List<MemberDTO> getMember(){
@@ -46,6 +48,12 @@ public class MemberController {
                 message = validatorResult.get(key);
             }
             return message;
+        }
+        else{
+            //비밀번호 암호화 bCrypPasswordEncoder ... Spring Security
+            String rawPassword = memberDTO.getUserPw();
+            String encPassword = passwordEncoder.passwordEncoder().encode(rawPassword);
+            memberDTO.setUserPw(encPassword);
         }
         memberService.save(memberDTO);
         return "success";
