@@ -25,7 +25,7 @@ public class memberServiceImpl {
                 .orElseThrow(() -> new IllegalArgumentException("아이디 또는 비밀번호가 일치하지 않습니다."));
         String token = tokenProvider.createToken(String.format("%s:%d", member.getUserId(),member.getAdmincheck()),
                 member.getUserId());
-        return new LoginResponse(member.getUserName(), member.getAdmincheck(), token);
+        return new LoginResponse(member.getUserId(), member.getUserName(), member.getAdmincheck(), token);
     }
 
 

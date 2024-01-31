@@ -4,6 +4,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 
 public record LoginResponse(
+        @Schema(description = "ID", example = "leesm")
+        String userId,
         @Schema(description = "이름", example = "이석민")
         String userName,
         @Schema(description = "권한레벨", example = "1")
