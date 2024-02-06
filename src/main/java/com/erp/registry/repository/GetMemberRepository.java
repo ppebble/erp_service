@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface GetMemberRepository extends JpaRepository<MemberEntity, String> {
-    @Query(value = "SELECT * FROM ERPUSRDEF ORDER BY CREATE_TIME", nativeQuery = true)
+    @Query(value = "SELECT * FROM profile ORDER BY hiredate", nativeQuery = true)
     List<MemberEntity> findAllDesc();
 }

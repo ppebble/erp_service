@@ -24,7 +24,7 @@ public class SwaggerConfig {
         // pathsToMatch로 원하는 경로의 api만 나오도록 설정
         return GroupedOpenApi.builder()
                 .group("api")
-                .pathsToMatch("/member/**")
+                .pathsToMatch("/**")
                 .build();
     }
 

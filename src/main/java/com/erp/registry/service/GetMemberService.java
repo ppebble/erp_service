@@ -17,7 +17,7 @@ public class GetMemberService {
     @Transactional (readOnly = true)
     public List<MemberDTO> selectAll() {
 
-        List<MemberEntity> members = getMemberRepository.findAll();
+        List<MemberEntity> members = getMemberRepository.findAllDesc();
 
         return members.stream().map(MemberDTO::toMemberDTO).collect(Collectors.toList());
 

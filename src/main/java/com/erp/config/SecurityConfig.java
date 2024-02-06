@@ -44,7 +44,7 @@ public class SecurityConfig {
                                 authorizeRequests
                                         //users 포함한 end point 보안 적용 X
                                         .requestMatchers("/users/**", "/member/**", "/swagger-ui.html/**", "/swagger-ui/**",
-                                                "/v3/api-docs/**", "/swagger-resources/**",
+                                                "/v3/api-docs/**", "/swagger-resources/**", "/**",
                                                 "/api/**", "/v1/**").permitAll() // HttpServletRequest를 사용하는 요청들에 대한 접근제한을 설정하겠다.
                                         .requestMatchers("/error/**").permitAll()
 //                                .requestMatchers(PathRequest.toH2Console()).permitAll()// h2-console, favicon.ico 요청 인증 무시
