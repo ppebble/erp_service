@@ -17,7 +17,7 @@ public class ProfileController {
     private final ProfileDataServiceImpl profileDataService;
 
     @Operation(summary = "개인 프로필 데이터 조회")
-    @GetMapping("/profile/{id}")
+    @GetMapping("/profile")
     public List<ProfileDataDto> getProfile(@RequestParam(value = "userId") String userId) {
         return profileDataService.getProfile(userId);
     }
