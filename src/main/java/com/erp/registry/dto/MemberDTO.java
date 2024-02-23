@@ -7,8 +7,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
+
 
 @NoArgsConstructor
 @Data
@@ -30,25 +32,28 @@ public class MemberDTO {
     private String empNo;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date hiredate;
+    private LocalDate hiredate;
 
     private String family;
 
     private String relation;
 
-    private Date armyStart;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate armyStart;
 
-    private Date armyEnd;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate armyEnd;
 
     private String armyBranch;
 
-    private Date birthday;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate birthday;
 
     private String tel;
 
     private String emergencyTel;
 
-    private String userEmail;
+    private String emailAuth;
 
     private String address;
 
@@ -94,10 +99,10 @@ public class MemberDTO {
     private String scienceTechCertify;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDateTime signUpDate;
+    private LocalDate signUpDate;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDateTime leavedate;
+    private LocalDate leavedate;
 
     public static MemberDTO toMemberDTO(MemberEntity memberEntity) {
         ModelMapper modelMapper = new ModelMapper();

@@ -1,9 +1,7 @@
 package com.erp.indv_profile.service;
 
-import com.erp.indv_profile.dto.ProfileDataDto;
-
-import java.util.List;
+import com.erp.indv_profile.dto.response.ProfileDataDto;
 
 public interface ProfileDataService {
-    List<ProfileDataDto> getProfile(String userId);
+    ProfileDataDto getProfile(String userId);
 }

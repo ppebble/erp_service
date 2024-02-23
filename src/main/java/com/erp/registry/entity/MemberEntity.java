@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -45,25 +46,25 @@ public class MemberEntity {
     @Column
     private String empNo;
     @Column
-    private Date hiredate;
+    private LocalDate hiredate;
     @Column
     private String family;
     @Column
     private String relation;
     @Column
-    private Date armyStart;
+    private LocalDate armyStart;
     @Column
-    private Date armyEnd;
+    private LocalDate armyEnd;
     @Column
     private String armyBranch;
     @Column
-    private Date birthday;
+    private LocalDate birthday;
     @Column
     private String tel;
     @Column
     private String emergencyTel;
     @Column
-    private String userEmail;
+    private String emailAuth;
     @Column
     private String address;
     @Column
@@ -113,10 +114,10 @@ public class MemberEntity {
 //    private LocalDateTime createTime;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDateTime signUpDate;
+    private LocalDate signUpDate;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDateTime leavedate;
+    private LocalDate leavedate;
 
     public static MemberEntity toMemberEntity(MemberDTO memberDTO){
         ModelMapper modelMapper = new ModelMapper();
