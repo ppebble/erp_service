@@ -13,8 +13,8 @@ import java.io.Serializable;
 @Data
 class abilityPk implements Serializable {
     private String userId;
-    private String abilityName;
-    private String abilityType;
+    private String empNo;
+    private String skillName;
 }
 
 @Entity
@@ -26,19 +26,19 @@ public class ProfileAbilityDataEntity {
     @Id
     @Column(name = "user_id")
     private String userId;
-    @Column
     @NotNull
     @Id
-    private String abilityType;
+    @Column(name = "emp_no")
+    private String empNo;
     @NotNull
     @Column
     @Id
-    private String abilityName;
+    private String skillName;
     @NotNull
     @Column
-    private String proficiency;
+    private String skillGrade;
     @Column
-    private String classCriteria;
+    private String classificationCriteria;
 
 
     public static ProfileAbilityDataEntity toProfileEntity(ProfileAbilityDataDto profileDataDto){

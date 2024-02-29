@@ -33,33 +33,33 @@ public class ProfileSkillInvenDataEntity {
     private String projectName;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate prjStartDate;
+    private LocalDate startDate;
     @Column
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate prjEndDate;
+    private LocalDate endDate;
     @Column
-    private String customer;
+    private String clientCompany;
     @Column
     @NotNull
-    private String affiliation;
+    private String workingCompany;
     @Column
-    private String devField;
+    private String developmentField;
     @Column
-    private String devRoll;
+    private String role;
     @Column
-    private String devDevice;
+    private String model;
     @Column
-    private String devOs;
+    private String os;
     @Column
-    private String devLang;
+    private String language;
     @Column
-    private String devDbms;
+    private String dbms;
     @Column
-    private String devTool;
+    private String tool;
     @Column
-    private String devNet;
+    private String communication;
     @Column
-    private String devComment;
+    private String etc;
 
     public static ProfileSkillInvenDataEntity toProfileEntity(ProfileSkillDataDto profileDataDto){
         ModelMapper modelMapper = new ModelMapper();

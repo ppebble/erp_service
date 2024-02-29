@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
 
+import java.time.LocalDate;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -20,7 +22,8 @@ public class InitDataEntity {
     private String licenseName;
     @Column(name = "user_id")
     private String userId;
-
+    @Column(name = "license_date")
+    private LocalDate licenseDate;
     public static InitDataEntity toInitDataEntity(InitDataDto initDataDto){
         ModelMapper modelMapper = new ModelMapper();
 

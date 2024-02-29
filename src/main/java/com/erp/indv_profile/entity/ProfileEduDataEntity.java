@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Data
 class eduPk implements Serializable {
     private String userId;
-    private String educationName;
+    private String eduName;
 }
 
 @Entity
@@ -27,17 +27,15 @@ public class ProfileEduDataEntity {
     private String userId;
     @Column
     @Id
-    private String educationName;
+    private String eduName;
     @Column
-    private String organ;
+    private String organization;
     @NotNull
     @Column
-    private LocalDate eduStartDate;
+    private LocalDate startDate;
     @NotNull
     @Column
-    private LocalDate eduEndDate;
-    @Column
-    private Integer eduDuration;
+    private LocalDate endDate;
 
     public static ProfileEduDataEntity toProfileEntity(ProfileEduDataDto profileDataDto){
         ModelMapper modelMapper = new ModelMapper();

@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface InitDataRepository extends JpaRepository<InitDataEntity, String> {
-    @Query(value = "select p.user_id, pl.license_name, pl.idx\n" +
+    @Query(value = "select p.user_id, pl.license_name, pl.idx, pl.license_date\n" +
             "from profile_license pl \n" +
             "\tleft join profile p \n" +
             "\ton pl.user_id = p.user_id\n" +

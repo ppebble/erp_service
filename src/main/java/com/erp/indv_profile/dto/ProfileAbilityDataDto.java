@@ -37,13 +37,13 @@ public class ProfileAbilityDataDto {
 //    @JsonFormat(pattern = "yyyy-MM-dd")
 //    private LocalDate eduEndDate;
 //    private Integer eduDuration;
+//    @NotNull
+//    private String abilityType;
     @NotNull
-    private String abilityType;
+    private String skillName;
     @NotNull
-    private String abilityName;
-    @NotNull
-    private String proficiency;
-    private String classCriteria;
+    private String skillGrade;
+    private String classificationCriteria;
 //    @NotNull
 //    private String projectName;
 //    @JsonFormat(pattern = "yyyy-MM-dd")

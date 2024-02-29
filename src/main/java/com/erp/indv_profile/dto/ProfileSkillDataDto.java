@@ -49,21 +49,21 @@ public class ProfileSkillDataDto {
     @NotNull
     private String projectName;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate prjStartDate;
+    private LocalDate startDate;
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate prjEndDate;
-    private String customer;
+    private LocalDate endDate;
+    private String clientCompany;
     @NotNull
-    private String affiliation;
-    private String devField;
-    private String devRoll;
-    private String devDevice;
-    private String devOs;
-    private String devLang;
-    private String devDbms;
-    private String devTool;
-    private String devNet;
-    private String devComment;
+    private String workingCompany;
+    private String developmentField;
+    private String role;
+    private String model;
+    private String os;
+    private String language;
+    private String dbms;
+    private String tool;
+    private String communication;
+    private String etc;
 
     public static List<ProfileSkillDataDto> toProfileDataDto(List<ProfileSkillInvenDataEntity> profileDataEntityList) {
         ModelMapper modelMapper = new ModelMapper();

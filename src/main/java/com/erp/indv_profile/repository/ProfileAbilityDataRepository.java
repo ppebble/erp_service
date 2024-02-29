@@ -9,14 +9,14 @@ import java.util.List;
 
 public interface ProfileAbilityDataRepository extends JpaRepository<ProfileAbilityDataEntity, String> {
     @Query(value = "\tselect\n" +
-            "\t\tpa.user_id,\n" +
-            "\t\tpa.ability_type,\n" +
-            "\t\tpa.ability_name,\n" +
-            "\t\tpa.proficiency,\n" +
-            "\t\tpa.class_criteria\n" +
-            "\tfrom profile p, profile_ability pa\n" +
+            "\t\tp.user_id,\n" +
+            "\t\tpa.emp_no,\n" +
+            "\t\tpa.skill_name,\n" +
+            "\t\tpa.skill_grade,\n" +
+            "\t\tpa.classification_criteria\n" +
+            "\tfrom profile p, skill pa\n" +
             "\twhere 1=1\n" +
             "\tand p.user_id = :userId" +
-            "\tand p.user_id = pa.user_id;", nativeQuery = true)
+            "\tand p.emp_no = pa.emp_no;", nativeQuery = true)
     List<ProfileAbilityDataEntity> findProfileAbilityByUserId(@Param("userId") String userId);
 }

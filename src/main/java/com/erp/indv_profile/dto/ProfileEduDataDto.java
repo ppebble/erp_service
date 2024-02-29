@@ -21,8 +21,8 @@ public class ProfileEduDataDto {
     @NotNull
     private String userId;
     @NotNull
-    private String educationName;
-    private String organ;
+    private String eduName;
+    private String organization;
 //    private String companyName;
 //    @JsonFormat(pattern = "yyyy-MM-dd")
 //    private LocalDate careerStart;
@@ -35,11 +35,10 @@ public class ProfileEduDataDto {
 //    private String jobClassification;
     @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate eduStartDate;
+    private LocalDate startDate;
     @NotNull
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate eduEndDate;
-    private Integer eduDuration;
+    private LocalDate endDate;
 //    @NotNull
 //    private String abilityType;
 //    @NotNull
